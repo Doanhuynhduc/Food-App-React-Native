@@ -7,14 +7,11 @@
  */
 
 import React from 'react';
-import Home from './src/scene/Home';
+
+import MyStack from './src/navigation/stacknavigation';
 
 const App = () => {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <MyStack />;
 };
 
 export default App;
