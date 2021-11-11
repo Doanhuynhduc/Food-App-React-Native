@@ -11,11 +11,15 @@ import COLORS from '../const/color';
 const {width} = Dimensions.get('screen');
 const cardWidth = width / 2 - 20;
 
-const ListFood = (data: any) => {
-  const [food, setFood] = React.useState(data.data.item);
+const ListFood = ({data, navigation}: {data: any; navigation: any}) => {
+  const [food, setFood] = React.useState(data.item);
   console.log(food);
   return (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => {}}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => {
+        navigation.navigate('DetailFood');
+      }}>
       <View
         style={{
           width: cardWidth,
