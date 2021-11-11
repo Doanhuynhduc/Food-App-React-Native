@@ -51,7 +51,7 @@ const foods = [
   },
 ];
 
-const Home = () => {
+const Home = ({navigation}: any) => {
   const [indexCategories, setIndexCategories] = React.useState(0);
   const setSelectIndexCategories = (index: any) => {
     setIndexCategories(index);
@@ -103,6 +103,7 @@ const Home = () => {
                 activeOpacity={0.8}
                 onPress={() => {
                   setSelectIndexCategories(index);
+                  navigation.navigate('Cart');
                 }}>
                 <View
                   style={
@@ -123,7 +124,7 @@ const Home = () => {
         <FlatList
           data={foods}
           numColumns={2}
-          renderItem={item => <ListFood data={item} />}
+          renderItem={item => <ListFood data={item} navigation={''} />}
           keyExtractor={item => item.id}
         />
       </View>
