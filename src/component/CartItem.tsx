@@ -38,6 +38,7 @@ const CartItem = ({data}: {data: any}) => {
               />
             </View>
             <View style={style.listItems}>
+              <Text>Xin chao thien </Text>
               <Text style={style.txtName}>{food.name}</Text>
               <Text style={style.txtCategories}>{food.ingredients}</Text>
               <Text style={style.txtPrice}>${food.price}</Text>
